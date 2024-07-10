@@ -23,10 +23,11 @@ jobs:
   initialize: 
     runs-on: self-hosted
       steps:
-        - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-        - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-        - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-        - run: echo "🍏 This job's status is ${{ job.status }}."
+        - name: Job Details
+          run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+          run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+          run: echo "🖥️ The workflow is now ready to test your code on the runner."
+          run: echo "🍏 This job's status is ${{ job.status }}."
 
   # This workflow contains a single job called "build"
   build:
