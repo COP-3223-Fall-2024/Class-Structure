@@ -36,7 +36,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Compile Code
-        run: gcc first_week/Hello_World.c
+        run: gcc first_week/Hello_World.c -o executable
 
       - name: Execute Code
-        run: a.out
+        run: ./executable
