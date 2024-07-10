@@ -15,7 +15,7 @@ on:
   
 defaults:
   run:
-    shell: powershell
+    shell: bash
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,6 +30,10 @@ jobs:
       - name: Checking out code
         uses: actions/checkout@v4
 
+      # Runs a single command using the runners shell
+      - name: Setup
+        run: prepare_env.bat
+        
       # Runs a single command using the runners shell
       - name: Run Code Analysis
         run: echo TODO
